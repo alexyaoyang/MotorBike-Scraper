@@ -30,3 +30,6 @@ for link in url:
     bikes.append(json.dumps(bike))
     
 print bikes[0]
+
+with open('bikes.txt','w') as outfile:
+    json.dump(bikes,outfile)
