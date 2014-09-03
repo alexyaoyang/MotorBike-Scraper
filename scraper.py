@@ -91,5 +91,5 @@ for link in url:
 
 with open('bikes.json', 'w') as outfile:
   json.dump(bikes, outfile)
-webbrowser.open("file:///Users/alex/Documents/MotorBike%20Scraper/scraper.html",2)    
+webbrowser.open("file:///Users/alex/Documents/MotorBikeScraper/scraper.html",2)    
 print "done!"
