@@ -23,6 +23,6 @@ ul.nav a:hover, ul.nav a:focus, ul.nav a:active, .navbar-default a.navbar-brand:
 .content-container h5{color:#303030}
 .content-container h6{color:black}
 .banner h1 {color:#f8f8f8}
-.content-container{padding:60px 10%}
-.media .pull-left img.media-object{height:200px;width:auto;}
+.content-container{padding:60px 5% 0px 5%}
+.media .pull-left .media-object{height:10em;width:15em;background-size:100%;background-repeat:no-repeat;background-position:center center;}
 .media.panel:hover{border-color:red;transition:all 0.5s;}
