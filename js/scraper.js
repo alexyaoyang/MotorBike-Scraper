@@ -11,7 +11,7 @@ var Scraper = {
 					class:'media panel panel-default'
 				});
 				var pullLeft = $('<a/>',{
-					href:"#",
+					href:json[i].href,
 					class:"pull-left",
 					html:'<div class="media-object" style="background-image:url('+json[i].image+')"></div>'
 				});
@@ -27,11 +27,11 @@ var Scraper = {
 				});
 				var tr2 = $('<tr/>',{
 					class:"table-row",
-					html:"<td><strong>Price/Day: </strong>"+json[i].ppd+"</td><td><strong>Reg Date: </strong>"+json[i].reg+"</td><td><strong>No: </strong>"+json[i].contact+"</td>"
+					html:"<td><strong>Price/Day: </strong>$"+json[i].ppd+"</td><td><strong>Reg Date: </strong>"+json[i].reg+"</td><td><strong>No: </strong>"+json[i].contact+"</td>"
 				});
 				var tr3 = $('<tr/>',{
 					class:"table-row",
-					html:"<td><strong>Model: </strong>"+json[i].model+"</td><td><strong>Desc: </strong>"+json[i].desc+"</td><td></td>"
+					html:"<td><strong>Model: </strong>"+json[i].model+"</td><td><strong>Description: </strong>"+json[i].desc+"</td><td></td>"
 				});
 				tr1.appendTo(table);
 				tr2.appendTo(table);
@@ -44,28 +44,3 @@ var Scraper = {
 		});
 	}
 }
-
-/*
-			<div class="col-xs-12">
-				<div class="media panel panel-default">
-					<a class="pull-left" href="#">
-						<img class="media-object" src="">
-					</a>
-					<div class="media-body">
-						<h4 class="media-heading"></h4>
-						<table style="width:100%">
-							<tr>
-								<td>Jill</td>
-								<td>Smith</td> 
-								<td>50</td>
-							</tr>
-							<tr>
-								<td>Eve</td>
-								<td>Jackson</td> 
-								<td>94</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-*/
