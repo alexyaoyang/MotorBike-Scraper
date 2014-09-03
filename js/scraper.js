@@ -8,11 +8,64 @@ var Scraper = {
 				console.log(json[i].image);
 				console.log(json[i].contact);
 				var media = $('<div/>',{
-					class:'media panel panel-default',
-					html:'<a class="pull-left" href="#"><div class="media-object" style="background-image:url('+json[i].image+')"></div></a><div class="media-body"><h4 class="media-heading">'+json[i].model+'</h4></div>'
+					class:'media panel panel-default'
 				});
+				var pullLeft = $('<a/>',{
+					href:"#",
+					class:"pull-left",
+					html:'<div class="media-object" style="background-image:url('+json[i].image+')"></div>'
+				});
+				var mediaBody = $('<div/>',{
+					class:"media-body"
+				});
+				var table = $('<table/>',{
+					class:"table table-body table-hover"
+				});
+				var tr1 = $('<tr/>',{
+					class:"table-row",
+					html:"<td><strong>Price: </strong>"+json[i].price+"</td><td><strong>COE Expire: </strong>"+json[i].expire+"</td><td><strong>Name: </strong>"+json[i].name+"</td>"
+				});
+				var tr2 = $('<tr/>',{
+					class:"table-row",
+					html:"<td><strong>Price/Day: </strong>"+json[i].ppd+"</td><td><strong>Reg Date: </strong>"+json[i].reg+"</td><td><strong>No: </strong>"+json[i].contact+"</td>"
+				});
+				var tr3 = $('<tr/>',{
+					class:"table-row",
+					html:"<td><strong>Model: </strong>"+json[i].model+"</td><td><strong>Desc: </strong>"+json[i].desc+"</td><td></td>"
+				});
+				tr1.appendTo(table);
+				tr2.appendTo(table);
+				tr3.appendTo(table);
+				table.appendTo(mediaBody);
+				pullLeft.appendTo(media);
+				mediaBody.appendTo(media);
 				media.appendTo('#bike-container');
 			}
 		});
 	}
 }
+
+/*
+			<div class="col-xs-12">
+				<div class="media panel panel-default">
+					<a class="pull-left" href="#">
+						<img class="media-object" src="">
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading"></h4>
+						<table style="width:100%">
+							<tr>
+								<td>Jill</td>
+								<td>Smith</td> 
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Eve</td>
+								<td>Jackson</td> 
+								<td>94</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+*/
