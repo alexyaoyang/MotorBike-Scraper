@@ -26,3 +26,6 @@ ul.nav a:hover, ul.nav a:focus, ul.nav a:active, .navbar-default a.navbar-brand:
 .content-container{padding:60px 5% 0px 5%}
 .media .pull-left .media-object{height:10em;width:15em;background-size:100%;background-repeat:no-repeat;background-position:center center;}
 .media.panel:hover{border-color:red;transition:all 0.5s;}
+.table-row td:first-child{width:10em;}
+.table-row td:nth-child(2){width:30em;}
+.table-row td:last-child{width:10em;}
