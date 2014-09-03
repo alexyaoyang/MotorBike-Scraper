@@ -33,5 +33,5 @@ for link in url:
     
 with open('bikes.json', 'w') as outfile:
   json.dump(bikes, outfile)
-webbrowser.open_new("scraper.html")    
+webbrowser.open("file:///Users/alex/Documents/MotorBike%20Scraper/scraper.html",2)    
 print "done!"
