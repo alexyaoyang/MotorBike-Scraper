@@ -9,24 +9,10 @@ var Scraper = {
 				console.log(json[i].contact);
 				var media = $('<div/>',{
 					class:'media panel panel-default',
-					html:'<a class="pull-left" href="#"><img class="media-object" src="'+json[i].image+'"></a><div class="media-body"><h4 class="media-heading">'+json[i].model+'</h4></div>'
+					html:'<a class="pull-left" href="#"><div class="media-object" style="background-image:url('+json[i].image+')"></div></a><div class="media-body"><h4 class="media-heading">'+json[i].model+'</h4></div>'
 				});
 				media.appendTo('#bike-container');
 			}
 		});
 	}
 }
-
-
-/*
-						<div class="col-xs-12">
-							<div class="media">
-							  <a class="pull-left" href="#">
-							    <img class="media-object" src="">
-							  </a>
-							  <div class="media-body">
-							    <h4 class="media-heading"></h4>
-							  </div>
-							</div>
-						</div>
-*/
